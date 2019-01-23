@@ -2,9 +2,9 @@
 import random
 
 class Block:
-    def __init__(self, location, display_text, contents):
+    def __init__(self, x, y, display_text, contents):
         self.contents = set(contents)
-        self.location = location
+        self.location = (x, y)
         self.display_text = display_text
 
     def interact(self, input_string):
@@ -13,9 +13,9 @@ class Block:
 
 
 class ShipBlock(Block):
-    def __init__(self):
-        # super().__init__...
-        pass
+    def __init__(self, location):
+        display_text = "BIG SHIP! SMOKE!!"
+        super().__init__(location, display_text, set())
 
 class ForestBlock(Block):
     def __init__(self, location, contents):
