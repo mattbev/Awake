@@ -7,6 +7,17 @@ class Item:
         return "{}\n=====\n{}\n".format(self.name, self.description)
 
 
+# class Shovel(Item):
+#     def __init__(self):
+#         super().__init__(name="Shovel",
+#                          description="A shovel, best used for digging.")
+#
+# class Hammer(Item):
+#     def __init__(self):
+#         super().__init__(name="Hammer",
+#                          description="A hammer, .")
+
+
 #------------------------------------------------------------------------------------------
 
 
@@ -67,11 +78,9 @@ class UtilityKnife(Weapon):
 
 
 class Trap(Weapon):
-    def __init__(self, location):
+    def __init__(self, name, description, damage, location):
         self.location = location
-        super().__init__(name="Sharpened Stick",
-                         description="A pointed stick, sharp enough to pierce flesh.",
-                         damage=10)
+        super().__init__(name, description, damage)
 
         def __str__(self):
             return "{}\n=====\n{}\nDamage: {}\nLocation: {}".format(self.name, self.description, self.damage, self.location)

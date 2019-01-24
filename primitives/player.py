@@ -1,6 +1,7 @@
 class Player:
     def __init__(self):
         self.hp = 100
+        self.stamina = 100
         self.location_x, self.location_y = world.starting_location
         self.inventory = set()
         self.victory = False
@@ -21,4 +22,4 @@ class Player:
     def move_west(self):
         self.move(dx=-1, dy=0)
 
-    
+
